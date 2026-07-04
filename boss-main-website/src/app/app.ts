@@ -87,6 +87,7 @@ export class App implements OnInit, AfterViewInit {
 
   toggleMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    console.log("Menu state:", this.isMobileMenuOpen);
   }
 
   // Professional smooth scroll function for your navigation bar
