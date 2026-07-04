@@ -1,0 +1,407 @@
+<div class="corporate-layout">
+ <!-- Navigation Bar (Mobile Friendly with Image Logo) -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <img src="BOSS-1.png" alt="Bharat Online Safety Services Logo" class="nav-logo">
+    </div>
+    
+    <!-- Hamburger Icon -->
+    <button class="hamburger" (click)="toggleMenu()">
+      <span class="bar" [class.open]="isMobileMenuOpen"></span>
+      <span class="bar" [class.open]="isMobileMenuOpen"></span>
+      <span class="bar" [class.open]="isMobileMenuOpen"></span>
+    </button>
+
+    <div class="nav-links" [class.active]="isMobileMenuOpen">
+      
+      <!-- Dropdown 1: Architecture -->
+      <div class="dropdown">
+        <a (click)="scrollToSection('about', $event)">Architecture ▾</a>
+        <div class="dropdown-content">
+          <a (click)="scrollToSection('about', $event)">Zero-Knowledge Routing</a>
+          <a (click)="scrollToSection('about', $event)">No Persistent Storage</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 2: Technology -->
+      <div class="dropdown">
+        <a (click)="scrollToSection('tech-stack', $event)">Technology ▾</a>
+        <div class="dropdown-content">
+          <a (click)="scrollToSection('tech-stack', $event)">Angular Frontend</a>
+          <a (click)="scrollToSection('tech-stack', $event)">Rust Server Backend</a>
+        </div>
+      </div>
+
+      <!-- Process (Standard Link) -->
+      <a (click)="scrollToSection('how-it-works', $event)">Process</a>
+
+      <!-- Dropdown 3: Pricing -->
+      <div class="dropdown">
+        <a (click)="scrollToSection('pricing', $event)">Pricing ▾</a>
+        <div class="dropdown-content">
+          <a (click)="scrollToSection('pricing', $event)">Partner Setup</a>
+          <a (click)="scrollToSection('pricing', $event)">Commission Model</a>
+        </div>
+      </div>
+
+      <!-- Contact (Standard Link) -->
+      <a (click)="scrollToSection('contact', $event)">Contact</a>
+
+      <!-- External link to the gateway -->
+      <a href="https://print.bharatonlinesafetyservices.com" class="btn-primary nav-btn">Launch Secure Print Portal</a>
+    </div>
+    </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <div class="badge">Bharat Online Safety Services</div>
+      <h1>Secure, Fast, and Reliable <br><span class="text-saffron">Document Processing</span></h1>
+      <p>
+        The enterprise-grade print gateway designed for absolute privacy. Upload your files securely and process them instantly through our trusted network without leaving a digital footprint.
+      </p>
+      <div class="hero-actions">
+        <a href="https://print.bharatonlinesafetyservices.com" class="btn-primary">Access Gateway</a>
+        <a href="#how-it-works" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Compliance Banner (NEW) -->
+  <div class="compliance-banner">
+    <div class="compliance-item">
+      <span class="icon">🛡️</span> 256-bit AES Encryption
+    </div>
+    <div class="compliance-item">
+      <span class="icon">📜</span> DPDP Act Aligned (India)
+    </div>
+    <div class="compliance-item">
+      <span class="icon">🗑️</span> Auto-Delete Verified
+    </div>
+  </div>
+
+
+  
+
+  <!-- Platform Statistics (NEW) -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <h2 class="text-saffron">10k+</h2>
+        <p>Documents Secured</p>
+      </div>
+      <div class="stat-box">
+        <h2 class="text-green">100%</h2>
+        <p>Zero-Retention Rate</p>
+      </div>
+      <div class="stat-box">
+        <h2 class="text-navy">99.9%</h2>
+        <p>Server Uptime</p>
+      </div>
+      <div class="stat-box">
+        <h2 class="text-saffron">&lt; 2s</h2>
+        <p>Average Fetch Time</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Architecture Section -->
+  <section id="about" class="about-section">
+    <div class="split-container">
+      <div class="split-text">
+        <h2>Built on a <span class="text-green">Zero-Knowledge</span> Architecture</h2>
+        <p>
+          At Bharat Online Safety Services, we believe your personal documents are yours alone. Our core infrastructure is engineered around a strict zero-database philosophy. 
+        </p>
+        <p>
+          Unlike traditional cloud printing services that store your files indefinitely, our routing system holds your data only as encrypted packets in transit. We cannot read, store, or sell your documents.
+        </p>
+      </div>
+      <div class="split-visual">
+        <div class="tech-box">
+          <div class="tech-icon">⚙️</div>
+          <h4>No Persistent Storage</h4>
+          <p>Files exist only in volatile memory during the active print session.</p>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon">🔐</div>
+          <h4>End-to-End Encryption</h4>
+          <p>Secure payload routing between the customer and the shopkeeper terminal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack Section (NEW) -->
+  <section id="tech-stack" class="tech-stack-section">
+    <div class="section-header">
+      <h2>Engineered for Speed & Security</h2>
+      <p>Powered by the most advanced frameworks to ensure instantaneous routing and memory safety.</p>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-card">
+        <h3>Angular Frontend</h3>
+        <p>A lightning-fast, reactive customer portal and shopkeeper dashboard designed for seamless interactions across all devices.</p>
+      </div>
+      <div class="stack-card">
+        <h3>Rust Backend Engineering</h3>
+        <p>Memory-safe, high-concurrency server architecture that powers our zero-database routing, guaranteeing no data leaks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="steps-section">
+    <div class="section-header">
+      <h2>Seamless Document Routing</h2>
+      <p>A simple, frictionless experience for both users and shopkeepers.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Upload File</h3>
+        <p>The customer uploads their document via our secure web portal from their smartphone or PC.</p>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Get Access Code</h3>
+        <p>A unique 6-digit cryptographic PIN is generated instantly for the customer.</p>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Fetch & Print</h3>
+        <p>The shopkeeper enters the PIN to fetch the file. Once printed, the document is permanently erased from the terminal.</p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Product Mockup Section (FIXED) -->
+  <section class="mockup-section fade-up">
+    <div class="section-header">
+      <h2>The Shopkeeper Terminal</h2>
+      <p>Clean, intuitive, and designed for high-speed printing queues.</p>
+    </div>
+    
+    <div class="mockup-container">
+      <div class="browser-mockup">
+        <div class="browser-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <div class="browser-url">print.bharatonlinesafetyservices.com/dashboard</div>
+        </div>
+        <div class="browser-body">
+          <div class="dash-sidebar">
+            <div class="dash-logo">BOSS</div>
+            <div class="dash-menu-item active">Print Queue</div>
+            <div class="dash-menu-item">History</div>
+            <div class="dash-menu-item">Settings</div>
+          </div>
+          <div class="dash-main">
+            <div class="dash-topbar">
+              <input type="text" placeholder="Enter 6-Digit PIN..." class="mock-input">
+              <button class="mock-btn">Fetch File</button>
+            </div>
+            <div class="queue-list">
+              <!-- Item 1: Normal Printing File -->
+              <div class="queue-item">
+                <div class="file-info">📄 Aadhar_Card_Scan.pdf</div>
+                <div class="file-action"><span class="badge success">Printing...</span></div>
+              </div>
+              
+              <!-- Item 2: The ONLY element that should have the live-delete-animation -->
+              <div class="queue-item deleting live-delete-animation">
+                <div class="file-info">📄 Legal_Affidavit.pdf</div>
+                <div class="file-action"><span class="badge warning animated-text">Auto-Deleting...</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Section (Side-by-Side Cards) -->
+  <section id="leadership" class="leadership-section">
+    <div class="section-header">
+      <h2>Vision & Leadership</h2>
+      <p>Driving the future of physical document security.</p>
+    </div>
+    
+    <!-- Both cards are now grouped inside ONE container -->
+    <div class="leadership-container">
+      
+      <!-- Card 1 -->
+      <div class="leader-card">
+        <div class="leader-avatar">GKD</div>
+        <h3>Gawali Krushana Devidas</h3>
+        <p class="leader-title">Founder & Lead Architect</p>
+        <p class="leader-bio">Spearheading the development of Bharat Online Safety Services with a commitment to zero-knowledge architectures, ensuring that the privacy of Indian citizens remains uncompromised across digital and physical touchpoints.</p>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="leader-card">
+        <div class="leader-avatar">HKS</div>
+        <h3>Hudekar Krutika Subhash</h3>
+        <p class="leader-title">Co-Founder & Operations</p>
+        <p class="leader-bio">Driving the nationwide expansion of the BOSS gateway, empowering local print shop owners to process secure documents faster while guaranteeing absolute data privacy for every customer.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Social Proof / Testimonials (NEW) -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-header">
+      <h2>Trusted by Print Shops Across Maharashtra</h2>
+      <p>Hear from the partners who are processing documents faster and safer with BOSS.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Customers love the privacy. They upload from home, give me the 6-digit PIN, and the file prints instantly. The auto-delete feature builds massive trust."</p>
+        <h4>Rahul S.</h4>
+        <p class="shop-name">Cyber Cafe Owner</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"No more WhatsApp document sharing or virus-infected USB drives. The BOSS terminal is fast, and the automated queue saves me hours every week."</p>
+        <h4>Priya M.</h4>
+        <p class="shop-name">Stationery & Print Hub</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (NEW) -->
+  <section id="faq" class="faq-section">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>Are my documents saved on your servers?</h4>
+        <p>No. Our zero-database architecture means your files are held in temporary memory just long enough to reach the printer, after which they are permanently destroyed.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How long is my 6-digit code valid?</h4>
+        <p>Codes are valid for a strictly limited active session to prevent unauthorized fetching.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can shopkeepers reprint my documents later?</h4>
+        <p>No. Once the document is fetched and sent to the printer queue, the encrypted payload is wiped from the shopkeeper terminal.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How can I set up BOSS in my shop?</h4>
+        <p>Contact our headquarters directly using the information below to get your secure terminal provisioned.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Banner (NEW) -->
+  <section class="cta-banner">
+    <h2>Ready to upgrade your document security?</h2>
+<p>Join the growing network of zero-retention data processing hubs today.</p>
+    <a href="https://print.bharatonlinesafetyservices.com" class="btn-primary btn-large">Launch the Platform</a>
+  </section>
+
+  <!-- Shopkeeper Pricing / Onboarding (NEW) -->
+  <section id="pricing" class="pricing-section">
+    <div class="section-header">
+      <h2>Simple Partner Onboarding</h2>
+<p>Zero hidden fees. Turn your shop into an authorized, secure document processing hub in 24 hours.</p>
+    </div>
+    <div class="pricing-container">
+      <div class="pricing-card">
+        <div class="tier-name">Shopkeeper Terminal</div>
+        <div class="price">Free Setup</div>
+        <p class="billing-cycle">Pay-as-you-go commission model</p>
+        
+        <ul class="pricing-features">
+          <li>✔️ Access to Shopkeeper Dashboard</li>
+          <li>✔️ Secure 6-Digit PIN Fetching</li>
+          <li>✔️ Automated Pricing Calculator</li>
+          <li>✔️ Zero-Trace Document Deletion</li>
+        </ul>
+        <a href="#contact" class="btn-primary" style="display: block; text-align: center; margin-top: 30px;">Request an Account</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Location Section (UPGRADED) -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Partner With Us</h2>
+        <p>Looking to deploy the BOSS gateway in your print shop? Reach out to our headquarters to set up your secure terminal.</p>
+        
+        <div class="address-block">
+          <h4>📍 Headquarters</h4>
+          <p>Akola, Maharashtra<br>India</p>
+        </div>
+        
+        <div class="address-block">
+          <h4>✉️ Support Inquiries</h4>
+          <p>support&#64;bharatonlinesafetyservices.com</p>
+        </div>
+      </div>
+      
+      <!-- New Professional Contact Form -->
+      <div class="contact-form-wrapper">
+        <form class="corporate-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="How can we help you?" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (UPGRADED) -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="brand-boss white-text">BOSS</span>
+        <p>Bharat Online Safety Services</p>
+      </div>
+      <div class="footer-links-grid">
+        <div class="footer-column">
+          <h4>Platform</h4>
+          <a href="#how-it-works">How it Works</a>
+          <a href="#tech-stack">Technology</a>
+          <a href="https://print.bharatonlinesafetyservices.com">Secure Processing Portal</a>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <a href="#about">About Us</a>
+          <a href="#leadership">Leadership</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <!-- New Legal Column -->
+        <div class="footer-column">
+          <h4>Legal & Trust</h4>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/cookies-Policy">Cookies</a>
+          <a href="/disclaimer">Disclaimer</a>
+          <a href="/security">Security Center</a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        &copy; {{ currentYear }} Bharat Online Safety Services. Developed in Akola, Maharashtra. All rights reserved.
+      </div>
+    </div>
+  </footer>
