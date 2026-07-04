@@ -11,6 +11,15 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Hides horizontal scrollbars */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+}
+
 :host {
   --navy-blue: #1e293b; 
   --saffron: #f97316;   
