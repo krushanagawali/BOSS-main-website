@@ -52,6 +52,7 @@
     </div>
     </nav>
 
+ <div *ngIf="router.url === '/'">
   <!-- Hero Section -->
   <header class="hero-section">
     <div class="hero-content">
@@ -369,6 +370,8 @@
       </div>
     </div>
   </section>
+
+ </div>
 
   <router-outlet></router-outlet>
 
