@@ -21,6 +21,9 @@ export const routes: Routes = [
     loadComponent: () => import('./legal/disclaimer/disclaimer').then(m => m.Disclaimer) 
   },
 
+  { path: 'security', 
+   loadComponent: () => import('./legal/security/security').then(m => m.Security) },
+
   // Catch-all route (should always be last)
   { path: '**', redirectTo: '' }
 
