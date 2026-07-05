@@ -6,19 +6,11 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-   box-sizing: border-box;
+  box-sizing: border-box;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   scroll-behavior: smooth;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden; /* Hides horizontal scrollbars */
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  scroll-behavior: smooth;
-}
 
 :host {
   --navy-blue: #1e293b; 
