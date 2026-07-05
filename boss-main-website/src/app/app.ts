@@ -60,9 +60,10 @@ import { isPlatformBrowser } from '@angular/common';
 export class App implements OnInit, AfterViewInit {
   currentYear: number = new Date().getFullYear();
   isMobileMenuOpen: boolean = false;
-  constructor(public router: Router) {}
+  
 
   constructor(
+    public router: Router,
     private el: ElementRef,
     @Inject(PLATFORM_ID) private platformId: Object // Injects the platform checker
   ) {}
