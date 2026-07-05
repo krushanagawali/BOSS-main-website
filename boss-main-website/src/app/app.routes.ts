@@ -1,5 +1,12 @@
 import { Routes } from '@angular/router';
 
+// 1. FORCE IMPORT THE COMPONENTS DIRECTLY (Adjust filenames if needed)
+import { PrivacyPolicy } from './legal/privacy-policy/privacy-policy';
+import { TermsConditions } from './legal/terms-conditions/terms-conditions';
+import { CookiesPolicy } from './legal/cookies-policy/cookies-policy';
+import { Disclaimer } from './legal/disclaimer/disclaimer';
+import { Security } from './legal/security/security'; // If you made this file
+
 export const routes: Routes = [
 
 
