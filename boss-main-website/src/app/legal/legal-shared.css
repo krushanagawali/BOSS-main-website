@@ -1,0 +1,90 @@
+.legal-page-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.legal-card {
+  max-width: 850px;
+  width: 100%;
+  background: #ffffff;
+  padding: 48px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  color: #374151;
+  line-height: 1.7;
+}
+
+.legal-card h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 16px;
+}
+
+.legal-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.legal-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.legal-card p {
+  margin-bottom: 16px;
+}
+
+.legal-card ul {
+  margin-bottom: 20px;
+  padding-left: 24px;
+}
+
+.legal-card li {
+  margin-bottom: 8px;
+}
+
+.legal-card strong {
+  color: #111827;
+}
+
+.legal-card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.legal-card a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Theme Support */
+body.dark-theme .legal-page-container {
+  background-color: #111827;
+}
+
+body.dark-theme .legal-card {
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+body.dark-theme .legal-card h1,
+body.dark-theme .legal-card h2,
+body.dark-theme .legal-card strong {
+  color: #f9fafb;
+}
+
+body.dark-theme .legal-card h3 {
+  color: #9ca3af;
+}
