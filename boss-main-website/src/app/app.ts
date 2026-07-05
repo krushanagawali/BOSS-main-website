@@ -48,6 +48,7 @@
 // }
 
 
+import { Router } from '@angular/router';
 import { Component, OnInit, ElementRef, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -59,6 +60,7 @@ import { isPlatformBrowser } from '@angular/common';
 export class App implements OnInit, AfterViewInit {
   currentYear: number = new Date().getFullYear();
   isMobileMenuOpen: boolean = false;
+  constructor(public router: Router) {}
 
   constructor(
     private el: ElementRef,
