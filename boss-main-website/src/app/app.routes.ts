@@ -5,9 +5,8 @@ export const routes: Routes = [
 
   // 1. Explicitly define the root (Home) path
   // Since your home content is in app.html, we can use a dummy component or redirect
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadComponent: () => import('./app').then(m => m.App) }, // Optional: point to your main app
-
+  { path: '', pathMatch: 'full', children: [] },
+  
   // 2. Legal Pages
   { path: 'privacy-policy', loadComponent: () => import('./legal/privacy-policy/privacy-policy').then(m => m.PrivacyPolicy) },
   { path: 'terms-conditions', loadComponent: () => import('./legal/terms-conditions/terms-conditions').then(m => m.TermsConditions) },
