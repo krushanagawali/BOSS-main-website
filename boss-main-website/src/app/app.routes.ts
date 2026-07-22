@@ -15,11 +15,11 @@ export const routes: Routes = [
 { path: '', children: [] , title: 'Bharat Online Safety Services' },
   
   // 2. Legal Pages
-  { path: 'privacy-policy', loadComponent: () => import('./legal/privacy-policy/privacy-policy').then(m => m.PrivacyPolicy) },
-  { path: 'terms-conditions', loadComponent: () => import('./legal/terms-conditions/terms-conditions').then(m => m.TermsConditions) },
-  { path: 'cookies-policy', loadComponent: () => import('./legal/cookies-policy/cookies-policy').then(m => m.CookiesPolicy) },
-  { path: 'disclaimer', loadComponent: () => import('./legal/disclaimer/disclaimer').then(m => m.Disclaimer) },
-  { path: 'security', loadComponent: () => import('./legal/security/security').then(m => m.Security) },
+  { path: 'privacy-policy', title: 'Privacy Policy | Bharat Online Safety Services', loadComponent: () => import('./legal/privacy-policy/privacy-policy').then(m => m.PrivacyPolicy) },
+  { path: 'terms-conditions', title: 'Terms Conditions | Bharat Online Safety Services', loadComponent: () => import('./legal/terms-conditions/terms-conditions').then(m => m.TermsConditions) },
+  { path: 'cookies-policy', title: 'Cookies Policy | Bharat Online Safety Services',  loadComponent: () => import('./legal/cookies-policy/cookies-policy').then(m => m.CookiesPolicy) },
+  { path: 'disclaimer', title: 'Disclaimer | Bharat Online Safety Services', loadComponent: () => import('./legal/disclaimer/disclaimer').then(m => m.Disclaimer) },
+  { path: 'security', title: 'Security | Bharat Online Safety Services',loadComponent: () => import('./legal/security/security').then(m => m.Security) },
 
   // 3. Catch-all route (redirects everything else to home)
   { path: '**', redirectTo: 'home' }
