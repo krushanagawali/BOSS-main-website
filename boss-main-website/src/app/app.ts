@@ -48,31 +48,91 @@
 // }
 
 
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
+// import { Component, OnInit, ElementRef, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+// import { isPlatformBrowser } from '@angular/common';
+
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.html',
+//   styleUrls: ['./app.css']
+// })
+// export class App implements OnInit, AfterViewInit {
+//   currentYear: number = new Date().getFullYear();
+//   isMobileMenuOpen: boolean = false;
+  
+
+//   constructor(
+//     public router: Router,
+//     private el: ElementRef,
+//     @Inject(PLATFORM_ID) private platformId: Object // Injects the platform checker
+//   ) {}
+
+//   ngOnInit() {}
+
+//   ngAfterViewInit() {
+//     // --- BULLETPROOF SSR GUARD ---
+//     // This tells Angular: Only run this code if we are inside a real web browser!
+//     if (isPlatformBrowser(this.platformId)) {
+//       const observer = new IntersectionObserver((entries) => {
+//         entries.forEach(entry => {
+//           if (entry.isIntersecting) {
+//             entry.target.classList.add('show-animate');
+//           }
+//         });
+//       }, { threshold: 0.1 });
+
+//       // Finds all elements with 'fade-up' and watches them safely
+//       const hiddenElements = this.el.nativeElement.querySelectorAll('.fade-up');
+//       hiddenElements.forEach((el: any) => observer.observe(el));
+//     }
+//   }
+
+//   toggleMenu() {
+//     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+//     console.log("Menu state:", this.isMobileMenuOpen);
+//   }
+
+//   // Professional smooth scroll function for your navigation bar
+//   scrollToSection(sectionId: string, event?: Event) {
+//     if (event) {
+//       event.preventDefault();
+//     }
+//     const element = document.getElementById(sectionId);
+//     if (element) {
+//       const yOffset = -90; 
+//       const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+//       window.scrollTo({ top: y, behavior: 'smooth' });
+//     }
+//     this.isMobileMenuOpen = false; 
+//   }
+// }
+
+
 import { Component, OnInit, ElementRef, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Router, RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class App implements OnInit, AfterViewInit {
   currentYear: number = new Date().getFullYear();
   isMobileMenuOpen: boolean = false;
-  
 
   constructor(
     public router: Router,
     private el: ElementRef,
-    @Inject(PLATFORM_ID) private platformId: Object // Injects the platform checker
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit() {}
 
   ngAfterViewInit() {
-    // --- BULLETPROOF SSR GUARD ---
-    // This tells Angular: Only run this code if we are inside a real web browser!
     if (isPlatformBrowser(this.platformId)) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -82,7 +142,6 @@ export class App implements OnInit, AfterViewInit {
         });
       }, { threshold: 0.1 });
 
-      // Finds all elements with 'fade-up' and watches them safely
       const hiddenElements = this.el.nativeElement.querySelectorAll('.fade-up');
       hiddenElements.forEach((el: any) => observer.observe(el));
     }
@@ -90,20 +149,18 @@ export class App implements OnInit, AfterViewInit {
 
   toggleMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
-    console.log("Menu state:", this.isMobileMenuOpen);
   }
 
-  // Professional smooth scroll function for your navigation bar
   scrollToSection(sectionId: string, event?: Event) {
     if (event) {
       event.preventDefault();
     }
     const element = document.getElementById(sectionId);
     if (element) {
-      const yOffset = -90; 
+      const yOffset = -90;
       const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
-    this.isMobileMenuOpen = false; 
+    this.isMobileMenuOpen = false;
   }
 }
