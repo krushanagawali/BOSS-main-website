@@ -8,6 +8,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     // provideRouter(routes,withHashLocation()), provideClientHydration(withEventReplay())
-    provideRouter(routes), provideClientHydration(...)
+    provideRouter(routes), provideClientHydration(withEventReplay())
   ] 
 };
