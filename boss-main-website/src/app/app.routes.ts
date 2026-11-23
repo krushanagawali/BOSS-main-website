@@ -28,6 +28,43 @@
 
 
 
+// import { Routes } from '@angular/router';
+
+// export const routes: Routes = [
+//   {
+//     path: '',
+//     children: [],
+//     title: 'Bharat Online Safety Services | Zero-Knowledge Secure Printing'
+//   },
+//   {
+//     path: 'privacy-policy',
+//     title: 'Privacy Policy | Bharat Online Safety Services',
+//     loadComponent: () => import('./legal/privacy-policy/privacy-policy').then(m => m.PrivacyPolicy)
+//   },
+//   {
+//     path: 'terms-conditions',
+//     title: 'Terms & Conditions | Bharat Online Safety Services',
+//     loadComponent: () => import('./legal/terms-conditions/terms-conditions').then(m => m.TermsConditions)
+//   },
+//   {
+//     path: 'cookies-policy',
+//     title: 'Cookies Policy | Bharat Online Safety Services',
+//     loadComponent: () => import('./legal/cookies-policy/cookies-policy').then(m => m.CookiesPolicy)
+//   },
+//   {
+//     path: 'disclaimer',
+//     title: 'Disclaimer | Bharat Online Safety Services',
+//     loadComponent: () => import('./legal/disclaimer/disclaimer').then(m => m.Disclaimer)
+//   },
+//   {
+//     path: 'security',
+//     title: 'Security Center | Bharat Online Safety Services',
+//     loadComponent: () => import('./legal/security/security').then(m => m.Security)
+//   },
+//   { path: '**', redirectTo: '' }
+// ];
+
+
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -39,27 +76,26 @@ export const routes: Routes = [
   {
     path: 'privacy-policy',
     title: 'Privacy Policy | Bharat Online Safety Services',
-    loadComponent: () => import('./legal/privacy-policy/privacy-policy').then(m => m.PrivacyPolicy)
+    loadComponent: () =>
+      import('./legal/privacy-policy/privacy-policy').then((m) => m.PrivacyPolicy)
   },
   {
     path: 'terms-conditions',
     title: 'Terms & Conditions | Bharat Online Safety Services',
-    loadComponent: () => import('./legal/terms-conditions/terms-conditions').then(m => m.TermsConditions)
+    loadComponent: () =>
+      import('./legal/terms-conditions/terms-conditions').then((m) => m.TermsConditions)
   },
   {
     path: 'cookies-policy',
     title: 'Cookies Policy | Bharat Online Safety Services',
-    loadComponent: () => import('./legal/cookies-policy/cookies-policy').then(m => m.CookiesPolicy)
+    loadComponent: () =>
+      import('./legal/cookies-policy/cookies-policy').then((m) => m.CookiesPolicy)
   },
   {
     path: 'disclaimer',
     title: 'Disclaimer | Bharat Online Safety Services',
-    loadComponent: () => import('./legal/disclaimer/disclaimer').then(m => m.Disclaimer)
-  },
-  {
-    path: 'security',
-    title: 'Security Center | Bharat Online Safety Services',
-    loadComponent: () => import('./legal/security/security').then(m => m.Security)
+    loadComponent: () =>
+      import('./legal/disclaimer/disclaimer').then((m) => m.Disclaimer)
   },
   { path: '**', redirectTo: '' }
 ];
